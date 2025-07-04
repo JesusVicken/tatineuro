@@ -7,7 +7,7 @@ import Link from "next/link"
 
 export function About() {
     return (
-        <section className="bg-white py-16">
+        <section className="bg-white py-12">
             <div className="container px-4 mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
@@ -15,7 +15,7 @@ export function About() {
                     <div className="relative" data-aos="fade-up-right" data-aos-delay="300">
                         <div className="relative w-full h-[400px] rounded-3xl overflow-hidden shadow-lg">
                             <Image
-                                src="/tati1.jpg"
+                                src="/tati2.jpg"
                                 alt="Dra. Tatiana Miranda - Neurologista"
                                 fill
                                 quality={100}
