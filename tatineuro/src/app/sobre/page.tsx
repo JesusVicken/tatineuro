@@ -15,7 +15,8 @@ import {
 
 export default function SobrePage() {
     const whatsappNumber = '5561994258350'
-    const whatsappMessage = 'Olá, vim pelo site e gostaria de marcar uma consulta com a Dra. Tatiana Miranda.'
+    const whatsappMessage =
+        'Olá, vim pelo site e gostaria de marcar uma consulta com a Dra. Tatiana Miranda.'
     const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`
 
     useEffect(() => {
@@ -25,6 +26,7 @@ export default function SobrePage() {
     return (
         <>
             <main className="bg-white py-12">
+                {/* Seção principal */}
                 <div className="container px-4 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
                     {/* Imagem */}
                     <div className="relative" data-aos="fade-up-right">
@@ -43,7 +45,7 @@ export default function SobrePage() {
                         <div className="hidden lg:block absolute lg:left-12 lg:-bottom-8 w-40 h-40 rounded-lg overflow-hidden">
                             <Image
                                 src="/tatilogo1.png"
-                                alt="Dra. Tatiana Miranda - Neurologista"
+                                alt="Logo Dra. Tatiana Miranda"
                                 fill
                                 quality={100}
                                 className="object-contain"
@@ -53,11 +55,14 @@ export default function SobrePage() {
                     </div>
 
                     {/* Texto */}
-                    <div className="space-y-4 mt-10 lg:mt-0 text-gray-700" data-aos="fade-up-left">
+                    <div
+                        className="space-y-4 mt-10 lg:mt-0 text-gray-700"
+                        data-aos="fade-up-left"
+                    >
                         <div className="w-full max-w-[280px] md:max-w-[380px] mx-auto md:mx-0">
                             <Image
                                 src="/tatilogo2.png"
-                                alt="Dra. Tatiana Miranda - Neurologista"
+                                alt="Logo Dra. Tatiana Miranda"
                                 width={380}
                                 height={120}
                                 className="w-full h-auto object-contain"
@@ -65,42 +70,44 @@ export default function SobrePage() {
                             />
                         </div>
 
-                        <p className="text-center md:text-left text-base">
-                            <strong>Especialista em Aplicação de Toxina Botulínica com Fins Neurológicos</strong> 🧠
+                        <p className="text-center md:text-left text-base font-medium">
+                            <span className="text-green-600">
+                                Especialista em Aplicação de Toxina Botulínica
+                            </span>{' '}
+                            🧠
                         </p>
 
-                        <p className="text-justify text-sm md:text-base">
-                            Sou médica pela Universidade Federal de Alagoas (UFAL), neurologista pelo Hospital de Base do Distrito Federal (HBDF) e fellowship em Distúrbios do Movimento também pelo HBDF.
-                        </p>
-                        <p className="text-justify text-sm md:text-base">
-                            A paixão por neurologia foi despertada nos primeiros anos de faculdade. Achei incrível descobrir que antes da execução de um "simples" movimento, havia um mecanismo complexo envolvido...
-                        </p>
-                        <p className="text-justify text-sm md:text-base">
-                            Nada é pequeno na neurologia. Quem vive com dor, rigidez ou postura inadequada sabe como uma melhora pode ser transformadora.
-                        </p>
-                        <p className="text-justify text-sm md:text-base">
-                            A dor crônica não é frescura. É invisível, mas real. O acolhimento muda tudo.
-                        </p>
-                        <p className="text-justify text-sm md:text-base">
-                            Por isso, utilizo a toxina botulínica como aliada em diversos tratamentos neurológicos. Ela pode ser revolucionária.
-                        </p>
+                        <div className="space-y-3 text-sm md:text-base">
+                            <p className="text-justify">
+                                Sou médica pela Universidade Federal de Alagoas (UFAL), neurologista pelo Hospital de Base do Distrito Federal (HBDF) e fellowship em Distúrbios do Movimento.
+                            </p>
+                            <p className="text-justify">
+                                A paixão por neurologia surgiu cedo. Achei fascinante como antes de qualquer movimento existe uma complexidade incrível por trás.
+                            </p>
+                            <p className="text-justify">
+                                Nada é pequeno na neurologia. Cada passo é conquista. A toxina botulínica é uma aliada poderosa nesse processo.
+                            </p>
+                            <p className="text-justify">
+                                A dor crônica é invisível, mas real. Acolher é parte do tratamento.
+                            </p>
+                        </div>
 
                         <ul className="space-y-2 pt-2 text-sm md:text-base">
                             <li className="flex items-center gap-2 justify-center md:justify-start">
                                 <IdentificationBadge className="text-green-600 w-5 h-5" />
-                                <strong>CRM-DF 27724</strong> | RQE 20779 | CRM-AL 7408
+                                <span><strong>CRM-DF 27724</strong> | RQE 20779 | CRM-AL 7408</span>
                             </li>
                             <li className="flex items-center gap-2 justify-center md:justify-start">
                                 <Phone className="text-green-600 w-5 h-5" />
-                                Transtornos do Movimento e Doenças Neurodegenerativas
+                                <span>Transtornos do Movimento e Doenças Neurodegenerativas</span>
                             </li>
                             <li className="flex items-center gap-2 justify-center md:justify-start">
                                 <Syringe className="text-green-600 w-5 h-5" />
-                                Toxina Botulínica com Fins Neurológicos
+                                <span>Toxina Botulínica com Fins Neurológicos</span>
                             </li>
                             <li className="flex items-center gap-2 justify-center md:justify-start">
                                 <MapPin className="text-green-600 w-5 h-5" />
-                                Maceió • Brasília • Telemedicina
+                                <span>Maceió • Brasília • Telemedicina</span>
                             </li>
                         </ul>
 
@@ -109,7 +116,7 @@ export default function SobrePage() {
                                 href={whatsappLink}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="bg-green-600 hover:bg-green-700 text-white flex items-center gap-2 px-4 py-2 rounded-md transition"
+                                className="bg-green-600 hover:bg-green-700 text-white flex items-center gap-2 px-6 py-2 rounded-md transition-colors"
                             >
                                 <WhatsappLogo className="w-5 h-5" />
                                 Agendar Consulta
@@ -118,16 +125,17 @@ export default function SobrePage() {
                     </div>
                 </div>
 
-                {/* Seção Contatos + Redes Sociais */}
+                {/* Seção Contatos + Redes Sociais + Imagem (3 colunas em desktop) */}
                 <section className="container mx-auto px-4 py-14 mt-16 bg-white text-black" data-aos="fade-up">
                     <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Contatos & Redes Sociais</h2>
+
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
                         {/* Contato */}
                         <div className="text-center sm:text-left">
                             <div className="space-y-3 text-gray-800">
-                                <p className="flex items-center justify-center sm:justify-start gap-2">
-                                    <Envelope className="text-green-600 w-5 h-5" />
-                                    tatianamirandaneuro@gmail.com
+                                <p className="flex items-center justify-center sm:justify-start gap-2 break-all">
+                                    <Envelope className="text-green-600 w-5 h-5 flex-shrink-0" />
+                                    <span className="text-sm sm:text-base">tatianamirandaneuro@gmail.com</span>
                                 </p>
                                 <p className="flex items-center justify-center sm:justify-start gap-2">
                                     <Phone className="text-green-600 w-5 h-5" />
@@ -145,7 +153,9 @@ export default function SobrePage() {
                             </div>
 
                             <a
-                                href={`https://wa.me/82999098978?text=${encodeURIComponent('Olá, gostaria de agendar uma consulta com a Dra. Tatiana Miranda.')}`}
+                                href={`https://wa.me/82999098978?text=${encodeURIComponent(
+                                    'Olá, gostaria de agendar uma consulta com a Dra. Tatiana Miranda.'
+                                )}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="mt-6 inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-medium px-6 py-3 rounded-md transition-colors"
@@ -165,10 +175,7 @@ export default function SobrePage() {
                                         src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"
                                         alt="Instagram"
                                         className="w-7 h-7 hover:scale-110 transition-transform"
-                                        style={{
-                                            filter:
-                                                'invert(28%) sepia(93%) saturate(3882%) hue-rotate(323deg) brightness(95%) contrast(102%)',
-                                        }}
+                                        style={{ filter: 'invert(28%) sepia(93%) saturate(3882%) hue-rotate(323deg) brightness(95%) contrast(102%)' }}
                                     />
                                 </a>
                                 <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
@@ -176,10 +183,7 @@ export default function SobrePage() {
                                         src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg"
                                         alt="Facebook"
                                         className="w-7 h-7 hover:scale-110 transition-transform"
-                                        style={{
-                                            filter:
-                                                'invert(38%) sepia(90%) saturate(601%) hue-rotate(191deg) brightness(95%) contrast(97%)',
-                                        }}
+                                        style={{ filter: 'invert(38%) sepia(90%) saturate(601%) hue-rotate(191deg) brightness(95%) contrast(97%)' }}
                                     />
                                 </a>
                                 <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
@@ -187,17 +191,27 @@ export default function SobrePage() {
                                         src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg"
                                         alt="YouTube"
                                         className="w-7 h-7 hover:scale-110 transition-transform"
-                                        style={{
-                                            filter:
-                                                'invert(16%) sepia(100%) saturate(7491%) hue-rotate(358deg) brightness(89%) contrast(122%)',
-                                        }}
+                                        style={{ filter: 'invert(16%) sepia(100%) saturate(7491%) hue-rotate(358deg) brightness(89%) contrast(122%)' }}
                                     />
                                 </a>
                             </div>
                         </div>
 
-                        {/* Logo ou espaço extra */}
-                        <div className="hidden lg:block" />
+                        {/* Imagem decorativa (somente no desktop) */}
+                        <div className="hidden lg:flex items-center justify-center -mt-12">
+                            <div className="relative w-60 h-60">
+                                <Image
+                                    src="/tatilogo.png"
+                                    alt="Logo Dra. Tatiana Miranda"
+                                    fill
+                                    className="object-contain"
+                                />
+                            </div>
+                        </div>
+
+
+
+
                     </div>
                 </section>
             </main>
