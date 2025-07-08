@@ -208,10 +208,6 @@ export default function SobrePage() {
                                 />
                             </div>
                         </div>
-
-
-
-
                     </div>
                 </section>
             </main>
