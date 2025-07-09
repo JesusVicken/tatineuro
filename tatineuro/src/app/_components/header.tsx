@@ -11,9 +11,11 @@ export default function Header() {
 
     const links = [
         { label: 'Início', href: '/' },
-        { label: 'Sobre', href: '/sobre' },
+        { label: 'Sobre Mim', href: '/sobre' },
+        { label: 'Tratamentos', href: '/tratamentos' },
         { label: 'Contato', href: '/contatos' },
         { label: 'Tele Medicina', href: '/telemed' },
+        { label: 'FAQ', href: '/faq' },
     ]
 
     return (
