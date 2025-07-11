@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import Image from 'next/image'
+import Link from 'next/link'
 import {
     WhatsappLogo,
     MapPin,
@@ -36,6 +37,7 @@ export default function ContactSection() {
                 <div className="absolute inset-0 bg-black/20"></div>
             </div>
 
+            {/* Conteúdo Principal (dentro do container) */}
             <div className="container mx-auto relative">
                 {/* Conteúdo Superior */}
                 <div className="py-12 px-4">
@@ -60,9 +62,15 @@ export default function ContactSection() {
                             <p className="flex items-start gap-2">
                                 <MapPin className="text-green-600 w-5 h-5 flex-shrink-0" />
                                 <span>
-                                    Brasília-DF <br />
+                                    Brasília-DF e Maceió-AL <br />
                                     <span className="text-sm text-gray-600">
-                                        (Atendimento também em Maceió e por Telemedicina)
+                                        Atendimentos presenciais e por{' '}
+                                        <Link
+                                            href="/telemed"
+                                            className="text-green-700 underline hover:text-green-800 transition-colors"
+                                        >
+                                            Telemedicina
+                                        </Link>
                                     </span>
                                 </span>
                             </p>
@@ -152,21 +160,21 @@ export default function ContactSection() {
                         </div>
                     </div>
                 </div>
+            </div>
 
-                {/* Mapa - Full Width sem margens laterais no desktop */}
-                <div className="w-screen -mx-4 md:-mx-6 lg:-mx-0 lg:w-full h-[300px] md:h-[400px] lg:h-[500px]">
-                    <iframe
-                        title="Localização Brasília"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245842.0198082934!2d-48.05315964892468!3d-15.72154228495493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3d18df9ae279%3A0x79188d5b54443465!2sBras%C3%ADlia%2C%20DF!5e0!3m2!1spt-BR!2sbr!4v1720546377670!5m2!1spt-BR!2sbr"
-                        width="100%"
-                        height="100%"
-                        loading="lazy"
-                        style={{ border: 0 }}
-                        allowFullScreen
-                        referrerPolicy="no-referrer-when-downgrade"
-                        className="w-full h-full"
-                    ></iframe>
-                </div>
+            {/* Mapa - Fora do container para ocupar toda a largura */}
+            <div className="w-full h-[300px] md:h-[400px] lg:h-[500px] relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+                <iframe
+                    title="Localização Brasília"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245842.0198082934!2d-48.05315964892468!3d-15.72154228495493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3d18df9ae279%3A0x79188d5b54443465!2sBras%C3%ADlia%2C%20DF!5e0!3m2!1spt-BR!2sbr!4v1720546377670!5m2!1spt-BR!2sbr"
+                    width="100%"
+                    height="100%"
+                    loading="lazy"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="w-full h-full"
+                ></iframe>
             </div>
         </section>
     )

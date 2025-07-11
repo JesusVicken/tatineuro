@@ -111,7 +111,7 @@ export default function SobrePage() {
                             </li>
                         </ul>
 
-                        <div className="flex justify-center md:justify-start pt-4">
+                        {/* <div className="flex justify-center md:justify-start pt-4">
                             <a
                                 href={whatsappLink}
                                 target="_blank"
@@ -121,7 +121,7 @@ export default function SobrePage() {
                                 <WhatsappLogo className="w-5 h-5" />
                                 Agendar Consulta
                             </a>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
 
@@ -161,15 +161,14 @@ export default function SobrePage() {
                                 className="mt-6 inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-medium px-6 py-3 rounded-md transition-colors"
                             >
                                 <WhatsappLogo className="w-5 h-5" weight="fill" />
-                                WhatsApp
+                                Agendar Consulta
                             </a>
                         </div>
 
                         {/* Redes Sociais */}
-                        <div className="text-center sm:text-left">
-                            <h3 className="text-xl font-semibold mb-4 text-black">Redes Sociais</h3>
-                            <p className="mb-4 text-gray-700">Siga a Dra. Tatiana:</p>
-                            <div className="flex justify-center sm:justify-start gap-6 items-center">
+                        <div className="text-center">
+                            <p className="mb-4 text-gray-700">Siga a Dra. Tatiana Miranda nas Redes Sociais</p>
+                            <div className="flex justify-center gap-6 items-center">
                                 <a href="https://www.instagram.com/tatianamirandaneuro" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                                     <img
                                         src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"
