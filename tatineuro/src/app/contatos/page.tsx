@@ -14,7 +14,7 @@ import {
 
 export default function ContactSection() {
     useEffect(() => {
-        AOS.init({ duration: 1000, once: true })
+        AOS.init({ duration: 1000, once: true, easing: 'ease-in-out' })
     }, [])
 
     const whatsappMessage =
@@ -37,26 +37,25 @@ export default function ContactSection() {
                 <div className="absolute inset-0 bg-black/20"></div>
             </div>
 
-            {/* Conteúdo Principal (dentro do container) */}
+            {/* Conteúdo Principal */}
             <div className="container mx-auto relative">
-                {/* Conteúdo Superior */}
                 <div className="py-12 px-4">
-                    <h2 className="text-3xl sm:text-4xl font-bold mb-10 text-center">
+                    <h2 className="text-3xl sm:text-4xl font-bold mb-10 text-center" data-aos="fade-down">
                         Contatos & Redes Sociais
                     </h2>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {/* Contato direto */}
-                        <div className="space-y-4 p-6 rounded-lg bg-white/90">
-                            <h3 className="text-xl font-semibold mb-4">Informações de Contato</h3>
+                        <div className="space-y-4 p-6 rounded-lg bg-white/90" data-aos="fade-up" data-aos-delay="100">
+                            <h3 className="text-xl font-semibold mb-4">Informações de Contato e Agendamentos</h3>
                             <p className="flex items-center gap-2 break-all">
                                 <Envelope className="text-green-600 w-5 h-5 flex-shrink-0" />
-                                <span className="text-sm sm:text-base">tatianamirandaneuro@gmail.com</span>
+                                <span className="text-sm sm:text-base">dratatianamirandaneuro@gmail.com</span>
                             </p>
 
                             <p className="flex items-center gap-2">
                                 <Phone className="text-green-600 w-5 h-5" />
-                                (82) 99909-8978
+                                (61) 99830-1406
                             </p>
 
                             <p className="flex items-start gap-2">
@@ -87,7 +86,7 @@ export default function ContactSection() {
                         </div>
 
                         {/* Redes Sociais */}
-                        <div className="p-6 rounded-lg bg-white/90">
+                        <div className="p-6 rounded-lg bg-white/90" data-aos="fade-up" data-aos-delay="200">
                             <h3 className="text-xl font-semibold mb-4">Redes Sociais</h3>
                             <p className="mb-6 text-gray-700">Siga a Dra. Tatiana Miranda</p>
 
@@ -146,8 +145,8 @@ export default function ContactSection() {
                             </div>
                         </div>
 
-                        {/* Logo - Aumentada no desktop */}
-                        <div className="flex items-center justify-center p-6 rounded-lg bg-white/90 md:col-span-2 lg:col-span-1">
+                        {/* Logo */}
+                        <div className="flex items-center justify-center p-6 rounded-lg bg-white/90 md:col-span-2 lg:col-span-1" data-aos="fade-up" data-aos-delay="300">
                             <div className="relative w-full max-w-[250px] md:max-w-[300px] aspect-square">
                                 <Image
                                     src="/tatilogo.png"
@@ -162,8 +161,8 @@ export default function ContactSection() {
                 </div>
             </div>
 
-            {/* Mapa - Fora do container para ocupar toda a largura */}
-            <div className="w-full h-[300px] md:h-[400px] lg:h-[500px] relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+            {/* Mapa */}
+            <div className="w-full h-[300px] md:h-[400px] lg:h-[500px] relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]" data-aos="fade-up" data-aos-delay="400">
                 <iframe
                     title="Localização Brasília"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245842.0198082934!2d-48.05315964892468!3d-15.72154228495493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3d18df9ae279%3A0x79188d5b54443465!2sBras%C3%ADlia%2C%20DF!5e0!3m2!1spt-BR!2sbr!4v1720546377670!5m2!1spt-BR!2sbr"

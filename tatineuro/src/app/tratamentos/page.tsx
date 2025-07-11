@@ -19,9 +19,19 @@ type Service = {
 
 const services: Service[] = [
     {
-        title: 'Sialorreia',
-        desc: 'Tratamento para a produção excessiva de saliva, promovendo conforto e melhor qualidade de vida.',
-        image: '/Sialorreia.jpg',
+        title: 'Enxaqueca Crônica',
+        desc: 'Tratamento preventivo para crises intensas e frequentes de enxaqueca.',
+        image: '/dorcabeca.jpg',
+    },
+    {
+        title: 'Bruxismo',
+        desc: 'Alívio da dor e do desgaste dental através da aplicação de toxina botulínica nos músculos da mastigação.',
+        image: '/bruxismo.jpeg', 
+    },
+    {
+        title: 'Espasmo Hemifacial',
+        desc: 'Alívio dos espasmos musculares involuntários de um lado do rosto.',
+        image: '/espasmo.jpg',
     },
     {
         title: 'Blefaroespasmo',
@@ -29,9 +39,9 @@ const services: Service[] = [
         image: '/Blefaroespasmo.jpg',
     },
     {
-        title: 'Hiperidrose Axilar',
-        desc: 'Controle do suor excessivo nas axilas com aplicação de toxina botulínica.',
-        image: '/Hiperidrose.png',
+        title: 'Espasticidade pós-AVC',
+        desc: 'Melhora da mobilidade e redução da rigidez em pacientes que sofreram AVC.',
+        image: '/Espasticidade.jpg',
     },
     {
         title: 'Paralisia Cerebral',
@@ -39,14 +49,9 @@ const services: Service[] = [
         image: '/paralisia.png',
     },
     {
-        title: 'Espasticidade pós-AVC',
-        desc: 'Melhora da mobilidade e redução da rigidez em pacientes que sofreram AVC.',
-        image: '/Espasticidade.jpg',
-    },
-    {
-        title: 'Espasmo Hemifacial',
-        desc: 'Alívio dos espasmos musculares involuntários de um lado do rosto.',
-        image: '/espasmo.png',
+        title: 'Sialorreia',
+        desc: 'Tratamento para a produção excessiva de saliva, promovendo conforto e melhor qualidade de vida.',
+        image: '/Sialorreia.jpg',
     },
     {
         title: 'Distonia Cervical',
@@ -57,11 +62,6 @@ const services: Service[] = [
         title: 'Cãibra do Escrivão',
         desc: 'Redução de espasmos e cãibras nos movimentos finos das mãos.',
         image: '/escrivao.jpg',
-    },
-    {
-        title: 'Enxaqueca Crônica',
-        desc: 'Tratamento preventivo para crises intensas e frequentes de enxaqueca.',
-        image: '/dorcabeca.jpg',
     },
 ]
 

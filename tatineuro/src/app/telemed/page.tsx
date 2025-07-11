@@ -1,5 +1,9 @@
 'use client'
 
+import { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 import {
     CheckCircle,
     AlertTriangle,
@@ -14,10 +18,14 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export default function TelemedPage() {
+    useEffect(() => {
+        AOS.init({ duration: 1000, once: true, easing: 'ease-in-out' })
+    }, [])
+
     return (
         <section className="bg-black text-white">
             {/* Hero com background */}
-            <div className="relative">
+            <div className="relative" data-aos="fade-in">
                 <div className="absolute inset-0 z-0">
                     <Image
                         src="/tati3.jpg"
@@ -28,7 +36,7 @@ export default function TelemedPage() {
                         priority
                     />
                 </div>
-                <div className="relative z-10 py-16 px-4 text-center bg-black/60">
+                <div className="relative z-10 py-16 px-4 text-center bg-black/60" data-aos="fade-up">
                     <div className="hidden md:flex justify-center mb-6">
                         <Image
                             src="/tatilogo2.png"
@@ -48,7 +56,7 @@ export default function TelemedPage() {
             </div>
 
             {/* Definição */}
-            <div className="py-12 px-4 max-w-4xl mx-auto">
+            <div className="py-12 px-4 max-w-4xl mx-auto" data-aos="fade-right">
                 <h2 className="text-2xl font-semibold mb-4">O que é Telemedicina?</h2>
                 <p className="text-zinc-300 leading-relaxed">
                     A Telemedicina é uma forma segura e regulamentada de realizar atendimentos médicos à distância. Na neurologia, permite que pacientes realizem consultas com conforto e segurança, mantendo o acompanhamento regular com a mesma qualidade do atendimento presencial.
@@ -56,7 +64,7 @@ export default function TelemedPage() {
             </div>
 
             {/* Benefícios */}
-            <div className="bg-zinc-900 py-12 px-4">
+            <div className="bg-zinc-900 py-12 px-4" data-aos="fade-up">
                 <div className="max-w-5xl mx-auto">
                     <h2 className="text-2xl font-semibold mb-8 text-center text-white">Benefícios da Consulta Online</h2>
                     <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -67,7 +75,7 @@ export default function TelemedPage() {
                             { icon: <CheckCircle className="text-green-500 w-6 h-6" />, title: 'Segurança', text: 'Reduza exposição a ambientes hospitalares.' },
                             { icon: <CheckCircle className="text-green-500 w-6 h-6" />, title: 'Continuidade do Cuidado', text: 'Permite acompanhamento regular.' },
                         ].map(({ icon, title, text }, i) => (
-                            <div key={i} className="flex items-start gap-4">
+                            <div key={i} className="flex items-start gap-4" data-aos="fade-up" data-aos-delay={i * 100}>
                                 {icon}
                                 <div>
                                     <h3 className="font-semibold text-base mb-1 text-white">{title}</h3>
@@ -80,7 +88,7 @@ export default function TelemedPage() {
             </div>
 
             {/* Indicações */}
-            <div className="py-12 px-4 max-w-5xl mx-auto">
+            <div className="py-12 px-4 max-w-5xl mx-auto" data-aos="fade-right">
                 <h2 className="text-2xl font-semibold mb-6">Casos indicados para Telemedicina</h2>
                 <ul className="list-disc list-inside text-zinc-300 space-y-2">
                     <li>Consultas de retorno e acompanhamento</li>
@@ -90,7 +98,7 @@ export default function TelemedPage() {
                     <li>Renovação de receitas e ajuste de medicação</li>
                 </ul>
 
-                <div className="mt-8 p-4 bg-yellow-100/10 border-l-4 border-yellow-400 flex items-start gap-4 rounded-md">
+                <div className="mt-8 p-4 bg-yellow-100/10 border-l-4 border-yellow-400 flex items-start gap-4 rounded-md" data-aos="zoom-in">
                     <AlertTriangle className="text-yellow-400 w-6 h-6 mt-1" />
                     <div>
                         <strong className="block text-yellow-300">Atenção:</strong>
@@ -102,7 +110,7 @@ export default function TelemedPage() {
             </div>
 
             {/* Passo a Passo */}
-            <div className="bg-zinc-900 py-12 px-4">
+            <div className="bg-zinc-900 py-12 px-4" data-aos="fade-up">
                 <div className="max-w-5xl mx-auto">
                     <h2 className="text-2xl font-semibold mb-8 text-center text-white">Como funciona a Teleconsulta</h2>
                     <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -113,8 +121,16 @@ export default function TelemedPage() {
                             { icon: <PhoneCall className="w-6 h-6 text-green-500" />, title: '4. Consulta Online', desc: 'Você receberá um link exclusivo para acessar a videochamada.' },
                             { icon: <FileCheck2 className="w-6 h-6 text-green-500" />, title: '5. Após a Consulta', desc: 'Receita, exames e atestado são enviados por e-mail ou WhatsApp com assinatura digital.' },
                         ].map(({ icon, title, desc }, i) => (
-                            <div key={i} className="bg-zinc-800 p-4 rounded-lg shadow-md border border-zinc-700">
-                                <div className="flex items-center gap-3 mb-2">{icon}<h3 className="font-semibold text-base text-white">{title}</h3></div>
+                            <div
+                                key={i}
+                                className="bg-zinc-800 p-4 rounded-lg shadow-md border border-zinc-700"
+                                data-aos="fade-up"
+                                data-aos-delay={i * 150}
+                            >
+                                <div className="flex items-center gap-3 mb-2">
+                                    {icon}
+                                    <h3 className="font-semibold text-base text-white">{title}</h3>
+                                </div>
                                 <p className="text-sm text-zinc-400">{desc}</p>
                             </div>
                         ))}
@@ -123,7 +139,7 @@ export default function TelemedPage() {
             </div>
 
             {/* CTA */}
-            <div className="text-center py-16 px-4 bg-gradient-to-br from-green-600 to-green-500 text-white">
+            <div className="text-center py-16 px-4 bg-gradient-to-br from-green-600 to-green-500 text-white" data-aos="zoom-in-up">
                 <h2 className="text-2xl md:text-3xl font-semibold mb-4">Agende sua Teleconsulta Agora</h2>
                 <p className="mb-6">Clique no botão abaixo e fale diretamente com nossa equipe pelo WhatsApp.</p>
                 <Link href="https://wa.me/82999098978" target="_blank">

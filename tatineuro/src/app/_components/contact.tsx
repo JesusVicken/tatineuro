@@ -51,15 +51,15 @@ export default function Contact() {
 
                     {/* Informações de Contato + WhatsApp */}
                     <div data-aos="fade-up" data-aos-delay="100">
-                        <h3 className="text-2xl font-semibold mb-4 text-black">Informações de Contato</h3>
+                        <h3 className="text-2xl font-semibold mb-4 text-black">Informações de Contato e Agendamentos</h3>
                         <div className="space-y-4 text-gray-800">
                             <p className="flex items-center gap-2">
                                 <Envelope className="text-green-600 w-5 h-5" />
-                                tatianamirandaneuro@gmail.com
+                                dratatianamirandaneuro@gmail.com
                             </p>
                             <p className="flex items-center gap-2">
                                 <Phone className="text-green-600 w-5 h-5" />
-                                (82) 99909-8978
+                                (61) 99830-1406
                             </p>
                             <p className="flex items-start gap-2">
                                 <MapPin className="text-green-600 w-5 h-5 flex-shrink-0" />
