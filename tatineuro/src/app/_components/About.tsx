@@ -66,7 +66,7 @@ export function About() {
                             </li>
                             <li className="flex items-center gap-2">
                                 <Check className="text-green-600" />
-                                Atendimento em <strong>Maceió</strong>, <strong>Brasília</strong> e <strong>Telemedicina</strong>
+                                Atendimento em Maceió, Brasília e Telemedicina
                             </li>
                         </ul>
 

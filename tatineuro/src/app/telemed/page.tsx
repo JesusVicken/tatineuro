@@ -24,19 +24,20 @@ export default function TelemedPage() {
 
     return (
         <section className="bg-black text-white">
-            {/* Hero com background */}
-            <div className="relative" data-aos="fade-in">
+            {/* Hero com background visível e texto transparente */}
+            <div className="relative h-auto min-h-[80vh] flex items-center justify-center text-center px-4" data-aos="fade-in">
                 <div className="absolute inset-0 z-0">
                     <Image
                         src="/tati3.jpg"
                         alt="Dra. Tatiana Miranda"
                         layout="fill"
                         objectFit="cover"
-                        className="opacity-80"
+                        className="opacity-90"
                         priority
                     />
                 </div>
-                <div className="relative z-10 py-16 px-4 text-center bg-black/60" data-aos="fade-up">
+
+                <div className="relative z-10 max-w-3xl">
                     <div className="hidden md:flex justify-center mb-6">
                         <Image
                             src="/tatilogo2.png"
@@ -46,10 +47,10 @@ export default function TelemedPage() {
                             className="h-auto w-auto object-contain"
                         />
                     </div>
-                    <h1 className="text-3xl md:text-4xl font-bold mb-4 text-white leading-tight">
+                    <h1 className="text-3xl md:text-4xl font-bold mb-4 text-white/90 drop-shadow-md">
                         Telemedicina: Atendimento Neurológico Sem Sair de Casa
                     </h1>
-                    <p className="max-w-2xl mx-auto text-zinc-300 text-base md:text-lg">
+                    <p className="text-white/80 text-base md:text-lg drop-shadow-sm">
                         Cuidado e conveniência onde você estiver. Consultas online com a Dra. Tatiana Miranda para acompanhamento e avaliações neurológicas.
                     </p>
                 </div>
@@ -138,7 +139,7 @@ export default function TelemedPage() {
                 </div>
             </div>
 
-            {/* CTA */}
+            {/* CTA Final */}
             <div className="text-center py-16 px-4 bg-gradient-to-br from-green-600 to-green-500 text-white" data-aos="zoom-in-up">
                 <h2 className="text-2xl md:text-3xl font-semibold mb-4">Agende sua Teleconsulta Agora</h2>
                 <p className="mb-6">Clique no botão abaixo e fale diretamente com nossa equipe pelo WhatsApp.</p>

@@ -21,8 +21,7 @@ import {
 
 export default function SobrePage() {
     const whatsappNumber = '5561994258350'
-    const whatsappMessage =
-        'Olá, vim pelo site e gostaria de marcar uma consulta com a Dra. Tatiana Miranda.'
+    const whatsappMessage = 'Olá, vim pelo site e gostaria de marcar uma consulta com a Dra. Tatiana Miranda.'
     const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`
 
     useEffect(() => {
@@ -114,107 +113,121 @@ export default function SobrePage() {
                             <Syringe className="text-blue-600 w-5 h-5 flex-shrink-0" />
                             <span>Toxina Botulínica com fins Neurológicos</span>
                         </li>
-                        <li className="flex items-center gap-2 justify-center md:justify-start">
-                            <MapPin className="text-pink-600 w-5 h-5 flex-shrink-0" />
-                            <span>
-                                Maceió • Brasília •{' '}
-                                <Link
-                                    href="/telemed"
-                                    className="text-green-700 underline underline-offset-2 hover:text-green-800 transition-colors"
-                                    title="Saiba mais sobre Telemedicina"
-                                >
-                                    Telemedicina
-                                </Link>
-                            </span>
-                        </li>
                     </ul>
                 </div>
             </div>
 
-            {/* Contatos e Redes */}
-            <section
-                className="container mx-auto px-4 py-14 mt-16 bg-white text-black"
-                data-aos="fade-up"
-            >
+            {/* Contatos e Redes - Seção atualizada */}
+            <section className="container mx-auto px-4 py-14 mt-2 bg-white text-black" data-aos="fade-up">
                 <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Contatos & Redes Sociais</h2>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-                    {/* Contato */}
-                    <div className="text-center sm:text-left" data-aos="fade-up" data-aos-delay="100">
-                        <div className="space-y-3 text-gray-800">
-                            <p className="flex items-center justify-center sm:justify-start gap-2 break-all">
-                                <Envelope className="text-green-600 w-5 h-5 flex-shrink-0" />
-                                <span className="text-sm sm:text-base">dratatianamirandaneuro@gmail.com</span>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                    {/* Logo */}
+                    <div className="flex justify-center md:justify-start items-center md:items-start">
+                        <Image
+                            src="/tatilogo.png"
+                            alt="Logo Tati Neuro"
+                            width={300}
+                            height={150}
+                            priority
+                            className="w-72 md:w-52 lg:w-64 object-contain"
+                        />
+                    </div>
+
+                    {/* Informações de Contato + WhatsApp */}
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <h3 className="text-2xl font-semibold mb-4 text-black">Informações de Contato e Agendamentos</h3>
+                        <div className="space-y-4 text-gray-800">
+                            <p className="flex items-center gap-2">
+                                <Envelope className="text-green-600 w-5 h-5" />
+                                dratatianamirandaneuro@gmail.com
                             </p>
-                            <p className="flex items-center justify-center sm:justify-start gap-2">
+                            <p className="flex items-center gap-2">
                                 <Phone className="text-green-600 w-5 h-5" />
                                 (61) 99830-1406
                             </p>
-                            <p className="flex items-start justify-center sm:justify-start gap-2">
+                            <p className="flex items-start gap-2">
                                 <MapPin className="text-green-600 w-5 h-5 flex-shrink-0" />
                                 <span>
-                                    Brasília-DF <br />
+                                    Brasília-DF e Maceió-AL <br />
                                     <span className="text-sm text-gray-600">
-                                        (Atendimento também em Maceió e por{' '}
+                                        Atendimentos presenciais e por{' '}
                                         <Link
                                             href="/telemed"
-                                            className="text-green-700 underline underline-offset-2 hover:text-green-800"
-                                            title="Saiba mais sobre Telemedicina"
+                                            className="text-green-700 underline hover:text-green-800 transition-colors"
                                         >
                                             Telemedicina
-                                        </Link>)
+                                        </Link>
                                     </span>
                                 </span>
                             </p>
                         </div>
 
-                        <a
-                            href={`https://wa.me/82999098978?text=${encodeURIComponent(
-                                'Olá, gostaria de agendar uma consulta com a Dra. Tatiana Miranda.'
-                            )}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="mt-6 inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-medium px-6 py-3 rounded-md transition-colors"
-                        >
-                            <WhatsappLogo className="w-5 h-5" weight="fill" />
-                            Agendar Consulta
-                        </a>
+                        {/* Botão WhatsApp */}
+                        <div className="flex justify-center md:justify-start mt-6">
+                            <a
+                                href={whatsappLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-medium px-6 py-3 rounded-md transition-colors"
+                            >
+                                <WhatsappLogo className="w-5 h-5" weight="fill" />
+                                Agendamento via WhatsApp
+                            </a>
+                        </div>
                     </div>
 
                     {/* Redes Sociais */}
-                    <div className="text-center" data-aos="fade-up" data-aos-delay="200">
-                        <p className="mb-4 text-gray-700">Siga a Dra. Tatiana Miranda nas Redes Sociais</p>
+                    <div data-aos="fade-up" data-aos-delay="200" className="text-center">
+                        <h3 className="text-2xl font-semibold mb-4 text-black">Redes Sociais</h3>
+                        <p className="mb-4 text-gray-700">Siga e acompanhe os conteúdos da Dra. Tatiana:</p>
                         <div className="flex justify-center gap-6 items-center">
                             <a
                                 href="https://www.instagram.com/tatianamirandaneuro"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                title="Instagram"
+                                aria-label="Instagram"
+                                className="hover:scale-110 transition-transform"
                             >
-                                <InstagramLogo className="text-pink-500 w-7 h-7 hover:scale-110 transition-transform" />
+                                <InstagramLogo className="text-pink-500 w-7 h-7" />
                             </a>
-                            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Facebook">
-                                <FacebookLogo className="text-blue-700 w-7 h-7 hover:scale-110 transition-transform" />
+                            <a
+                                href="https://www.facebook.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Facebook"
+                                className="hover:scale-110 transition-transform"
+                            >
+                                <FacebookLogo className="text-blue-700 w-7 h-7" />
                             </a>
-                            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" title="YouTube">
-                                <YoutubeLogo className="text-red-600 w-7 h-7 hover:scale-110 transition-transform" />
+                            <a
+                                href="https://www.youtube.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="YouTube"
+                                className="hover:scale-110 transition-transform"
+                            >
+                                <YoutubeLogo className="text-red-600 w-7 h-7" />
                             </a>
-                        </div>
-                    </div>
-
-                    {/* Logo decorativa */}
-                    <div className="hidden lg:flex items-center justify-center -mt-12" data-aos="fade-up" data-aos-delay="300">
-                        <div className="relative w-60 h-60">
-                            <Image
-                                src="/tatilogo.png"
-                                alt="Logo Dra. Tatiana Miranda"
-                                fill
-                                className="object-contain"
-                            />
                         </div>
                     </div>
                 </div>
             </section>
+
+            {/* Mapa */}
+            <div className="w-full h-[300px] md:h-[400px] lg:h-[450px]">
+                <iframe
+                    title="Localização Brasília"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245842.0198082934!2d-48.05315964892468!3d-15.72154228495493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3d18df9ae279%3A0x79188d5b54443465!2sBras%C3%ADlia%2C%20DF!5e0!3m2!1spt-BR!2sbr!4v1720546377670!5m2!1spt-BR!2sbr"
+                    width="100%"
+                    height="100%"
+                    loading="lazy"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="w-full h-full"
+                ></iframe>
+            </div>
         </main>
     )
 }
