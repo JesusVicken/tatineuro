@@ -74,15 +74,18 @@ export default function ContactSection() {
                                 </span>
                             </p>
 
-                            <a
-                                href={`https://wa.me/61998301406?text=${encodeURIComponent(whatsappMessage)}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="mt-6 inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-medium px-6 py-3 rounded-md transition-colors"
-                            >
-                                <WhatsappLogo className="w-5 h-5" weight="fill" />
-                                Agendar Consulta
-                            </a>
+                            {/* Botão centralizado com animação */}
+                            <div className="mt-6 flex justify-center">
+                                <a
+                                    href={`https://wa.me/61998301406?text=${encodeURIComponent(whatsappMessage)}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-medium px-6 py-3 rounded-md transition-colors animate-bounce"
+                                >
+                                    <WhatsappLogo className="w-5 h-5" weight="fill" />
+                                    Agendar Consulta
+                                </a>
+                            </div>
                         </div>
 
                         {/* Redes Sociais */}
