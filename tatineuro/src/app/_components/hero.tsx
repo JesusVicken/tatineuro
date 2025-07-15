@@ -101,7 +101,7 @@ export default function Hero() {
 function WhatsAppButton({ isMobile = false }: { isMobile?: boolean }) {
     return (
         <a
-            href="https://wa.me/5582999098978?text=Olá, vim pelo site e gostaria de marcar uma consulta com a Dra. Tatiana Miranda."
+            href="https://wa.me/5561998301406?text=Olá, vim pelo site e gostaria de marcar uma consulta com a Dra. Tatiana Miranda."
             target="_blank"
             rel="noopener noreferrer"
             className={`

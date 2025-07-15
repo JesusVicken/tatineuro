@@ -143,7 +143,7 @@ export default function TelemedPage() {
             <div className="text-center py-16 px-4 bg-gradient-to-br from-green-600 to-green-500 text-white" data-aos="zoom-in-up">
                 <h2 className="text-2xl md:text-3xl font-semibold mb-4">Agende sua Teleconsulta Agora</h2>
                 <p className="mb-6">Clique no botão abaixo e fale diretamente com nossa equipe pelo WhatsApp.</p>
-                <Link href="https://wa.me/82999098978" target="_blank">
+                <Link href="https://wa.me/61998301406" target="_blank">
                     <Button size="lg" className="text-lg font-semibold bg-white text-green-700 hover:bg-zinc-100">
                         Agendar com a Dra. Tatiana
                     </Button>

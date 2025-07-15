@@ -75,7 +75,7 @@ export default function ContactSection() {
                             </p>
 
                             <a
-                                href={`https://wa.me/82999098978?text=${encodeURIComponent(whatsappMessage)}`}
+                                href={`https://wa.me/61998301406?text=${encodeURIComponent(whatsappMessage)}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="mt-6 inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-medium px-6 py-3 rounded-md transition-colors"

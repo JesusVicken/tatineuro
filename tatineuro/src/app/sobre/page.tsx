@@ -20,7 +20,7 @@ import {
 } from '@phosphor-icons/react'
 
 export default function SobrePage() {
-    const whatsappNumber = '5561994258350'
+    const whatsappNumber = '5561998301406'
     const whatsappMessage = 'Olá, vim pelo site e gostaria de marcar uma consulta com a Dra. Tatiana Miranda.'
     const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`
 
