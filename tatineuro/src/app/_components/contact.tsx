@@ -27,7 +27,7 @@ export default function Contact() {
                 {/* Título e descrição */}
                 <div className="text-center mb-12" data-aos="fade-down">
                     <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black">
-                        Contatos
+                        Contatos & Redes Sociais
                     </h1>
                     <p className="text-gray-600 max-w-2xl mx-auto mt-2 text-base md:text-lg">
                         Entre em contato com a Dra. Tatiana Miranda para agendamentos, dúvidas ou informações.
