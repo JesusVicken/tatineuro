@@ -165,7 +165,8 @@ export default function ContactSection() {
             </div>
 
             {/* Mapa */}
-            <div className="w-full h-[300px] md:h-[400px] lg:h-[500px] relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]" data-aos="fade-up" data-aos-delay="400">
+            <div className="w-screen h-[300px] md:h-[400px] lg:h-[500px]" data-aos="fade-up" data-aos-delay="400">
+
                 <iframe
                     title="Localização Brasília"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245842.0198082934!2d-48.05315964892468!3d-15.72154228495493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3d18df9ae279%3A0x79188d5b54443465!2sBras%C3%ADlia%2C%20DF!5e0!3m2!1spt-BR!2sbr!4v1720546377670!5m2!1spt-BR!2sbr"
