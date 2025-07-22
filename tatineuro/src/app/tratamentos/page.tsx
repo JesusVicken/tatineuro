@@ -32,11 +32,8 @@ type Service = {
     details: ReactNode // Conteúdo detalhado para o modal
 }
 
-// --- DADOS DOS TRATAMENTOS ---
-
-// Tratamentos com Toxina (agora com a propriedade 'details')
 const toxinTreatments: Service[] = [
-    { title: 'Enxaqueca Crônica', desc: 'Tratamento preventivo para crises intensas e frequentes de enxaqueca.', image: '/dorcabeca.jpg', details: <p>O tratamento com toxina botulínica para enxaqueca crônica é um procedimento preventivo, aplicado em pontos específicos da cabeça, pescoço e ombros para reduzir a frequência e a intensidade das crises de dor.</p> },
+    { title: 'Enxaqueca Crônica', desc: 'Tratamento preventivo para crises intensas e frequentes de enxaqueca.', image: '/dorcabeca.jpg', details: <p>O tratamento com toxina botulínica para enxaqueca crônica é um procedimento preventivo, aplicado em pontos específicos da cabeça, pescoço e ombros para reduzir a frequência e a intensidade das crises de dor. Protocolo PREEMPT.</p> },
     { title: 'Bruxismo', desc: 'Alívio da dor e do desgaste dental através da aplicação de toxina botulínica.', image: '/bruxismo.jpeg', details: <p>A aplicação de toxina botulínica nos músculos da mastigação (masseter e temporal) ajuda a reduzir a força excessiva do apertamento e ranger dos dentes, aliviando dores de cabeça, na mandíbula e o desgaste dental.</p> },
     { title: 'Espasmo Hemifacial', desc: 'Alívio dos espasmos musculares involuntários de um lado do rosto.', image: '/espasmo.jpg', details: <p>O tratamento visa relaxar os músculos faciais que se contraem involuntariamente, proporcionando alívio significativo dos espasmos e melhorando a qualidade de vida e a interação social do paciente.</p> },
     { title: 'Blefaroespasmo', desc: 'Relaxamento dos músculos ao redor dos olhos, reduzindo contrações involuntárias.', image: '/Blefaroespasmo.jpg', details: <p>A aplicação de toxina botulínica nos músculos ao redor dos olhos é o tratamento padrão-ouro para o blefaroespasmo, reduzindo o piscar excessivo e o fechamento involuntário das pálpebras.</p> },
@@ -45,45 +42,12 @@ const toxinTreatments: Service[] = [
     { title: 'Sialorreia', desc: 'Tratamento para produção excessiva de saliva.', image: '/Sialorreia.jpg', details: <p>A aplicação da toxina nas glândulas salivares diminui a produção excessiva de saliva (sialorreia), uma condição comum em diversas doenças neurológicas, melhorando o conforto e a higiene do paciente.</p> },
     { title: 'Distonia Cervical', desc: 'Correção de posturas anormais da cabeça e pescoço.', image: '/distonia.png', details: <p>Este tratamento foca em relaxar os músculos do pescoço que causam posturas anormais e dolorosas, aliviando a dor e melhorando a posição da cabeça.</p> },
     { title: 'Cãibra do Escrivão', desc: 'Redução de espasmos nos movimentos finos das mãos.', image: '/escrivao.jpg', details: <p>A cãibra do escrivão é uma distonia focal que afeta os músculos da mão e do antebraço durante a escrita. A toxina botulínica pode aliviar os espasmos e melhorar a capacidade de realizar tarefas de escrita.</p> },
+    { title: 'Paralisia de Bell', desc: 'Melhora da simetria facial e redução de sequelas motoras.', image: '/bell.webp', details: <p>A toxina botulínica pode ser usada em casos de Paralisia de Bell para equilibrar a assimetria facial, especialmente em sequelas com sincinesias (movimentos involuntários associados a movimentos voluntários). A aplicação é feita de forma estratégica para harmonizar a expressão facial e melhorar a funcionalidade.</p> },
+    { title: 'Alguns tipos de Tremores', desc: 'Redução da amplitude de tremores em áreas específicas.', image: '/tremores.jpg', details: <p>Em certos tipos de tremores, como os tremores de ação ou posicionais, a toxina botulínica pode ser aplicada em músculos selecionados para reduzir a amplitude dos movimentos involuntários, melhorando a coordenação e a qualidade de vida do paciente.</p> }
+
 ]
 
-// Demais condições atendidas (com o conteúdo detalhado que você forneceu)
 const generalTreatments: Service[] = [
-    {
-        title: 'Doença de Parkinson',
-        desc: 'Controle de bradicinesia, rigidez e tremores. O tratamento visa controlar os sintomas e melhorar a qualidade de vida.',
-        image: '/parkinson.jpg',
-        details: (
-            <div className="space-y-3 text-zinc-300">
-                <p>A Doença de Parkinson é uma condição neurológica progressiva que afeta principalmente o movimento.</p>
-                <h4 className="font-semibold text-white pt-2">Principais Características:</h4>
-                <ul className="list-disc list-inside space-y-1">
-                    <li><strong>Sintomas Motores:</strong> Bradicinesia (lentidão de movimentos), rigidez muscular e tremor em repouso.</li>
-                    <li><strong>Faixa Etária:</strong> Pode ocorrer em qualquer idade, com pico de incidência por volta dos 60 anos. A probabilidade aumenta com a idade.</li>
-                    <li><strong>Fatores de Risco:</strong> História familiar positiva pode dobrar a probabilidade. Início antes dos 50 anos sugere uma maior chance de causa genética.</li>
-                    <li><strong>Gênero:</strong> É mais comum em homens do que em mulheres (proporção de 3 para 2).</li>
-                    <li><strong>Diagnóstico Precoce:</strong> Sinais não motores podem surgir de 10 a 20 anos antes das manifestações motoras.</li>
-                    <li><strong>Tratamento:</strong> Existe controle eficaz dos sintomas para melhorar a qualidade de vida do paciente.</li>
-                </ul>
-            </div>
-        ),
-    },
-    {
-        title: 'Tremor Essencial',
-        desc: 'Tremor de ação, geralmente simétrico, que afeta mãos, braços e até a voz. Não relacionado ao Parkinson.',
-        image: '/tremor.jpg',
-        details: (
-            <div className="space-y-3 text-zinc-300">
-                <p>O Tremor Essencial é um distúrbio do movimento caracterizado por um tremor involuntário, mais notável durante a ação.</p>
-                <h4 className="font-semibold text-white pt-2">Principais Características:</h4>
-                <ul className="list-disc list-inside space-y-1">
-                    <li><strong>Tipo de Tremor:</strong> É tipicamente um tremor de ação, ou seja, ocorre ao realizar movimentos voluntários como escrever ou segurar um copo.</li>
-                    <li><strong>Áreas Afetadas:</strong> Geralmente afeta mãos e braços de forma simétrica, mas também pode atingir a cabeça, a voz e outras partes do corpo.</li>
-                    <li><strong>Diferença para Parkinson:</strong> Diferente do tremor de Parkinson, que ocorre principalmente em repouso, o Tremor Essencial manifesta-se com a ação.</li>
-                </ul>
-            </div>
-        ),
-    },
     {
         title: 'Enxaqueca',
         desc: 'Doença neurológica complexa e hereditária que causa dor de cabeça intensa, pulsátil e incapacitante.',
@@ -104,8 +68,82 @@ const generalTreatments: Service[] = [
                 </ul>
                 <p className="font-bold text-lg text-center text-white pt-4">VIVER COM DOR NÃO É NORMAL!</p>
             </div>
-        ),
+        )
     },
+    {
+        title: 'Cefaleia Tensional Crônica',
+        desc: 'Dor de cabeça contínua e em pressão, geralmente bilateral e de longa duração.',
+        image: '/cefaleia.png',
+        details: <p>Caracteriza-se por uma dor em aperto ou pressão, leve a moderada, que ocorre por mais de 15 dias no mês. Pode ser agravada por estresse, tensão muscular e fatores emocionais.</p>
+    },
+    {
+        title: 'Cefaleia por Uso Excessivo de Medicamentos',
+        desc: 'Dor de cabeça causada pelo uso frequente de analgésicos ou triptanos.',
+        image: '/medicamentos.png',
+        details: <p>O uso contínuo de medicamentos para dor de cabeça pode gerar um ciclo de dor-rebote. A interrupção ou mudança da medicação é essencial para o tratamento eficaz.</p>
+    },
+    {
+        title: 'Cefaleia em Salvas',
+        desc: 'Dor de cabeça extremamente intensa, em ataques curtos e recorrentes.',
+        image: '/salvas.png',
+        details: <p>Uma das dores mais intensas descritas. Ocorre de forma unilateral, geralmente ao redor do olho, com sintomas autonômicos (lacrimejamento, congestão nasal). Acomete mais homens e pode ocorrer várias vezes ao dia.</p>
+    },
+    {
+        title: 'Doença de Parkinson',
+        desc: 'Controle de bradicinesia, rigidez e tremores. O tratamento visa controlar os sintomas e melhorar a qualidade de vida.',
+        image: '/parkinson.jpg',
+        details: (
+            <div className="space-y-3 text-zinc-300">
+                <p>A Doença de Parkinson é uma condição neurológica progressiva que afeta principalmente o movimento.</p>
+                <h4 className="font-semibold text-white pt-2">Principais Características:</h4>
+                <ul className="list-disc list-inside space-y-1">
+                    <li><strong>Sintomas Motores:</strong> Bradicinesia (lentidão de movimentos), rigidez muscular e tremor em repouso.</li>
+                    <li><strong>Faixa Etária:</strong> Pico de incidência por volta dos 60 anos.</li>
+                    <li><strong>Fatores de Risco:</strong> História familiar pode aumentar a chance de desenvolvimento.</li>
+                    <li><strong>Diagnóstico Precoce:</strong> Sinais não motores podem surgir antes dos motores.</li>
+                </ul>
+            </div>
+        )
+    },
+    {
+        title: 'Parkinsonismo Atípico',
+        desc: 'Síndromes semelhantes ao Parkinson, com resposta limitada à levodopa.',
+        image: '/parkinsonatipico.webp',
+        details: <p>Inclui condições como Atrofia de Múltiplos Sistemas (AMS) e Paralisia Supranuclear Progressiva (PSP). Apresentam rigidez, instabilidade postural e disfunções autonômicas.</p>
+    },
+    {
+        title: 'Tremor Essencial',
+        desc: 'Tremor de ação, geralmente simétrico, que afeta mãos, braços e até a voz. Não relacionado ao Parkinson.',
+        image: '/tremor.jpg',
+        details: (
+            <div className="space-y-3 text-zinc-300">
+                <p>Distúrbio neurológico comum, com tremores visíveis durante ações voluntárias. Pode afetar a coordenação e a qualidade de vida.</p>
+                <ul className="list-disc list-inside space-y-1">
+                    <li>Acomete mãos, braços, cabeça e voz.</li>
+                    <li>Mais comum com o envelhecimento.</li>
+                    <li>Tratamento pode incluir medicamentos, toxina botulínica e em casos graves, cirurgia.</li>
+                </ul>
+            </div>
+        )
+    },
+    {
+        title: 'Distonias',
+        desc: 'Contrações musculares involuntárias que causam movimentos e posturas anormais.',
+        image: '/distonia.png',
+        details: <p>Podem afetar uma parte do corpo (focais), várias partes (segmentares) ou o corpo todo (generalizadas). A toxina botulínica é uma das principais abordagens terapêuticas.</p>
+    },
+    {
+        title: 'AVC (Acidente Vascular Cerebral)',
+        desc: 'Conduta neurológica após AVC, incluindo prevenção de sequelas e reabilitação.',
+        image: '/avc.webp',
+        details: <p>Após um AVC, o acompanhamento neurológico é essencial para prevenir novas ocorrências, tratar sequelas motoras, cognitivas ou sensoriais e melhorar a qualidade de vida com apoio reabilitacional.</p>
+    },
+    {
+        title: 'Epilepsia',
+        desc: 'Controle de crises epilépticas com abordagem individualizada.',
+        image: '/epilepsia.jpg',
+        details: <p>Doença caracterizada por crises convulsivas recorrentes. O tratamento inclui medicamentos anticonvulsivantes, orientações sobre segurança e, em alguns casos, cirurgia.</p>
+    }
 ]
 
 // --- COMPONENTE PRINCIPAL ---

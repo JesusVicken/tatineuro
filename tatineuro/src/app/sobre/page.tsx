@@ -103,7 +103,7 @@ export default function SobrePage() {
                         </li>
                         <li className="flex items-center gap-2 justify-center md:justify-start" title="Cefaleia, dores crônicas, enxaqueca">
                             <Brain className="text-purple-600 w-5 h-5 flex-shrink-0" />
-                            <span>Especialista em Cefaleia e Dor Crônica</span>
+                            <span>Cefaleia e Dor Crônica</span>
                         </li>
                         <li className="flex items-center gap-2 justify-center md:justify-start" title="Movimentos involuntários e distonias">
                             <Heartbeat className="text-red-500 w-5 h-5 flex-shrink-0" />
