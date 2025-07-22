@@ -8,15 +8,16 @@ import { Menu, X } from 'lucide-react'
 
 export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
     const links = [
         { label: 'Início', href: '/' },
         { label: 'Sobre Mim', href: '/sobre' },
         { label: 'Tratamentos', href: '/tratamentos' },
         { label: 'Contato', href: '/contatos' },
+        { label: 'Consulta Domiciliar', href: '/domiciliar' },
         { label: 'Tele Medicina', href: '/telemed' },
         { label: 'FAQ', href: '/faq' },
     ]
+
 
     return (
         <header className="w-full h-[72px] bg-white shadow-md sticky top-0 z-50 backdrop-blur">

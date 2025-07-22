@@ -27,9 +27,9 @@ import { cn } from '@/lib/utils'
 // Estrutura de dados atualizada para incluir detalhes ricos
 type Service = {
     title: string
-    desc: string // Descrição curta para o card
+    desc: string
     image: string
-    details: ReactNode // Conteúdo detalhado para o modal
+    details: ReactNode
 }
 
 const toxinTreatments: Service[] = [
@@ -298,6 +298,15 @@ export default function TratamentosPage() {
                         <ArrowRight className="h-5 w-5 md:h-6 md:w-6" />
                     </Button>
                 </div>
+            </div>
+            <div className="mt-16 flex justify-center" data-aos="fade-up" data-aos-delay="300">
+                <Image
+                    src="/tatilogo1.png"
+                    alt="Logo da Dra. Tatiana Miranda"
+                    width={80}
+                    height={50}
+                    className="opacity-80 hover:opacity-100 transition-opacity duration-300"
+                />
             </div>
         </section>
     )
