@@ -71,6 +71,18 @@ export default function ConsultaDomiciliarPage() {
                     </CardContent>
                 </Card>
             </div>
+            <div className="flex justify-center mt-6">
+                <Image
+                    src="/tatilogo.png"
+                    alt="Logo Dra. Tatiana Miranda"
+                    width={260}
+                    height={260}
+                    className="w-40 md:w-48 lg:w-60 object-contain"
+                    priority
+                />
+
+            </div>
+
         </section>
     )
 }
