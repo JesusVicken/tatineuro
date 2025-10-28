@@ -76,9 +76,9 @@ export default function SobrePage() {
 
                     <p className="text-center md:text-left text-base font-medium">
                         <span className="text-green-600">
-                            Especialista em Aplicação de Toxina Botulínica
+                            Neurologista especialista em Distúrbios do movimento, com foco em tremores, Doença de Parkinson, cefaleias e aplicação de toxina botulínica.
                         </span>{' '}
-                        🧠
+                        
                     </p>
 
                     <div className="space-y-3 text-sm md:text-base" data-aos="fade-up" data-aos-delay="100">
@@ -99,7 +99,11 @@ export default function SobrePage() {
                     <ul className="space-y-3 pt-2 text-sm md:text-base" data-aos="fade-up" data-aos-delay="300">
                         <li className="flex items-center gap-2 justify-center md:justify-start">
                             <IdentificationBadge className="text-green-600 w-5 h-5 flex-shrink-0" />
-                            <span><strong>CRM-DF 27724</strong> | RQE 20779 | <strong>CRM-AL 7408</strong></span>
+                            <span><strong>CRM-DF 27724 - RQE 20779</strong></span>
+                        </li>
+                        <li className="flex items-center gap-2 justify-center md:justify-start">
+                            <IdentificationBadge className="text-green-600 w-5 h-5 flex-shrink-0" />
+                            <span><strong>CRM-AL 7408 - RQE 6168</strong></span>
                         </li>
                         <li className="flex items-center gap-2 justify-center md:justify-start" title="Cefaleia, dores crônicas, enxaqueca">
                             <Brain className="text-purple-600 w-5 h-5 flex-shrink-0" />

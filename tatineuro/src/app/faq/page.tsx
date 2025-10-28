@@ -15,7 +15,7 @@ export default function FAQPage() {
         {
             question: 'Quais são as especialidades da Dra. Tatiana Miranda?',
             answer:
-                'A Dra. Tatiana é especialista em Enxaqueca, Parkinson e Transtornos do Movimento. Atua com Toxina Botulínica para distonias, bruxismo, enxaqueca crônica e outras disfunções neurológicas.',
+                'A Dra Tatiana é neurologista com fellowship em Distúrbios do Movimento e atua, além dessa especialidade, com foco em enxaqueca e toxina botulínica para as diversas disfunções neurológicas.',
         },
         {
             question: 'Como posso agendar uma consulta?',

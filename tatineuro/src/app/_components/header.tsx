@@ -14,7 +14,7 @@ export default function Header() {
         { label: 'Tratamentos', href: '/tratamentos' },
         { label: 'Contato', href: '/contatos' },
         { label: 'Consulta Domiciliar', href: '/domiciliar' },
-        { label: 'Tele Medicina', href: '/telemed' },
+        { label: 'Telemedicina', href: '/telemed' },
         { label: 'FAQ', href: '/faq' },
     ]
 

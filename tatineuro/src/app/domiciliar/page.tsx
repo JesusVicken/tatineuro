@@ -39,20 +39,20 @@ export default function ConsultaDomiciliarPage() {
 
                         <h2 className="text-xl font-semibold text-zinc-900">Quem se beneficia desse serviço?</h2>
                         <ul className="list-disc list-inside space-y-1">
-                            <li>Pacientes com sequelas neurológicas graves após um AVC</li>
-                            <li>Indivíduos com Doença de Parkinson em estágios avançados</li>
-                            <li>Pessoas com demências que possuem dificuldades de locomoção</li>
+                            <li>Pacientes com sequelas neurológicas graves após um AVC;</li>
+                            <li>Indivíduos com Doença de Parkinson em estágios avançados;</li>
+                            <li>Pessoas com demências que possuem dificuldades de locomoção;</li>
                         </ul>
 
                         <Separator />
 
                         <h2 className="text-xl font-semibold text-zinc-900">Benefícios da Consulta Domiciliar</h2>
                         <ul className="list-disc list-inside space-y-1">
-                            <li>Mais conforto e tranquilidade para o paciente e a família</li>
-                            <li>Facilidade na compreensão e adesão ao tratamento</li>
-                            <li>Esclarecimento de dúvidas em tempo real, com todos os envolvidos</li>
-                            <li>Observações práticas sobre alimentação, mobilidade e estímulo ao lazer</li>
-                            <li>Planejamento terapêutico mais eficaz e realista</li>
+                            <li>Mais conforto e tranquilidade para o paciente e a família;</li>
+                            <li>Facilidade na compreensão e adesão ao tratamento;</li>
+                            <li>Esclarecimento de dúvidas em tempo real, com todos os envolvidos;</li>
+                            <li>Observações práticas sobre alimentação, mobilidade e estímulo ao lazer;</li>
+                            <li>Planejamento terapêutico mais eficaz e realista;</li>
                         </ul>
 
                         <p>

@@ -55,18 +55,32 @@ export function About() {
                             Atendendo em Maceió e Brasília, além de consultas por telemedicina, a Dra. Tatiana combina expertise técnica com abordagem acolhedora, garantindo o melhor cuidado para seus pacientes.
                         </p>
 
-                        <ul className="space-y-3">
-                            <li className="flex items-center gap-2">
-                                <Check className="text-green-600" />
-                                <strong>CRM-DF 27724</strong> | <strong>RQE 20779</strong> - <strong>CRM-AL 7408</strong>
+                        <ul className="space-y-4">
+                            <li className="flex items-start gap-3">
+                                <Check className="text-green-600 mt-0.5 flex-shrink-0" />
+                                <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
+                                    <strong>CRM-DF 27724 -</strong>
+                                    <strong>RQE 20779</strong>
+                                </div>
                             </li>
-                            <li className="flex items-center gap-2">
-                                <Check className="text-green-600" />
-                                Especialista em Transtornos do Movimento e Doenças Neurodegenerativas
+                            <li className="flex items-start gap-3">
+                                <Check className="text-green-600 mt-0.5 flex-shrink-0" />
+                                <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
+                                    <strong>CRM-AL 7408 -</strong>
+                                    <strong>RQE 6168</strong>
+                                </div>
                             </li>
-                            <li className="flex items-center gap-2">
-                                <Check className="text-green-600" />
-                                Atendimento em Maceió, Brasília e Telemedicina
+                            <li className="flex items-start gap-3">
+                                <Check className="text-green-600 mt-0.5 flex-shrink-0" />
+                                <span className="text-gray-700 leading-relaxed">
+                                    Neurologista especialista em Distúrbios do Movimento, com foco em tremores, Doença de Parkinson, cefaleias e aplicação de toxina botulínica.
+                                </span>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <Check className="text-green-600 mt-0.5 flex-shrink-0" />
+                                <span className="text-gray-700">
+                                    Atendimento em Maceió, Brasília e Telemedicina
+                                </span>
                             </li>
                         </ul>
 

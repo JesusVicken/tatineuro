@@ -64,7 +64,7 @@ const generalTreatments: Service[] = [
                 <h4 className="font-semibold text-white pt-2">Diagnóstico e Tratamento:</h4>
                 <ul className="list-disc list-inside space-y-1">
                     <li>O diagnóstico é <strong>clínico</strong>, baseado na história do paciente. Exames de imagem só são pedidos em caso de suspeita de outras condições (sinais de alerta).</li>
-                    <li>O tratamento preventivo é indicado para quem tem <strong>mais de 3 dias de dor de cabeça por mês</strong>, ou em casos específicos de crises muito incapacitantes.</li>
+                    <li>O tratamento preventivo é indicado para quem tem <strong>mais de 3 crises de enxaqueca por mês</strong>, ou em casos específicos de crises muito incapacitantes.</li>
                 </ul>
                 <p className="font-bold text-lg text-center text-white pt-4">VIVER COM DOR NÃO É NORMAL!</p>
             </div>
@@ -74,7 +74,7 @@ const generalTreatments: Service[] = [
         title: 'Cefaleia Tensional Crônica',
         desc: 'Dor de cabeça contínua e em pressão, geralmente bilateral e de longa duração.',
         image: '/cefaleia.png',
-        details: <p>Caracteriza-se por uma dor em aperto ou pressão, leve a moderada, que ocorre por mais de 15 dias no mês. Pode ser agravada por estresse, tensão muscular e fatores emocionais.</p>
+        details: <p>Caracteriza-se por uma dor em aperto ou pressão, leve a moderada, que geralmente inicia no final da tarde e pode ocorrer vários dias no mês, com indicação de tratamento. Pode ser agravada por estresse, tensão muscular e fatores emocionais.</p>
     },
     {
         title: 'Cefaleia por Uso Excessivo de Medicamentos',
@@ -95,13 +95,46 @@ const generalTreatments: Service[] = [
         details: (
             <div className="space-y-3 text-zinc-300">
                 <p>A Doença de Parkinson é uma condição neurológica progressiva que afeta principalmente o movimento.</p>
+
                 <h4 className="font-semibold text-white pt-2">Principais Características:</h4>
                 <ul className="list-disc list-inside space-y-1">
                     <li><strong>Sintomas Motores:</strong> Bradicinesia (lentidão de movimentos), rigidez muscular e tremor em repouso.</li>
                     <li><strong>Faixa Etária:</strong> Pico de incidência por volta dos 60 anos.</li>
-                    <li><strong>Fatores de Risco:</strong> História familiar pode aumentar a chance de desenvolvimento.</li>
                     <li><strong>Diagnóstico Precoce:</strong> Sinais não motores podem surgir antes dos motores.</li>
+                    <li><strong>Fatores de risco:</strong> Exposição a pesticidas ou a solventes de limpeza, metanfetamina, doença inflamatória intestinal, diabetes mellitus.</li>
+                    <li><strong>Fatores de proteção:</strong> Consumo de cafeína, tabagismo, uso de estatina.</li>
+
                 </ul>
+
+                {/* --- INÍCIO DA SEÇÃO ADICIONADA --- */}
+                <h4 className="font-semibold text-white pt-4 mt-4 border-t border-zinc-700">
+                    Epidemiologia e Fatores
+                </h4>
+
+                <div className="space-y-6 mt-4">
+                    <div className="relative w-full aspect-[4/5] sm:aspect-[16/9]">
+                        <Image
+                            src="/1.jpeg"
+                            alt="Epidemiologia da Doença de Parkinson"
+                            fill
+                            className="object-cover rounded-lg shadow-md"
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px"
+                            priority
+                        />
+                    </div>
+
+                    <div className="relative w-full aspect-[4/5] sm:aspect-[16/9]">
+                        <Image
+                            src="/2.jpeg"
+                            alt="Fatores ambientais e de proteção da Doença de Parkinson"
+                            fill
+                            className="object-cover rounded-lg shadow-md"
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px"
+                        />
+                    </div>
+                </div>
+                {/* --- FIM DA SEÇÃO ADICIONADA --- */}
+
             </div>
         )
     },
@@ -120,7 +153,6 @@ const generalTreatments: Service[] = [
                 <p>Distúrbio neurológico comum, com tremores visíveis durante ações voluntárias. Pode afetar a coordenação e a qualidade de vida.</p>
                 <ul className="list-disc list-inside space-y-1">
                     <li>Acomete mãos, braços, cabeça e voz.</li>
-                    <li>Mais comum com o envelhecimento.</li>
                     <li>Tratamento pode incluir medicamentos, toxina botulínica e em casos graves, cirurgia.</li>
                 </ul>
             </div>
@@ -142,7 +174,26 @@ const generalTreatments: Service[] = [
         title: 'Epilepsia',
         desc: 'Controle de crises epilépticas com abordagem individualizada.',
         image: '/epilepsia.jpg',
-        details: <p>Doença caracterizada por crises convulsivas recorrentes. O tratamento inclui medicamentos anticonvulsivantes, orientações sobre segurança e, em alguns casos, cirurgia.</p>
+        details: (
+            <div className="space-y-4 text-zinc-300">
+                <h4 className="font-semibold text-white pt-2 text-lg">Definição Clínica</h4>
+                <p>A epilepsia é diagnosticada com base em um dos seguintes critérios:</p>
+                <ul className="list-disc list-inside space-y-2 pl-2">
+                    <li>Pelo menos duas crises não provocadas (ou reflexas), ocorrendo com intervalo superior a 24 horas;</li>
+                    <li>Uma crise não provocada (ou reflexa) e uma probabilidade de novas crises semelhante ao risco de recorrência geral (pelo menos 60%) após duas crises não provocadas, ocorrendo ao longo dos próximos 10 anos;</li>
+                    <li>Diagnóstico de uma síndrome epiléptica.</li>
+                </ul>
+
+                <h4 className="font-semibold text-white pt-2 text-lg">Diagnóstico e Avaliação</h4>
+                <p>A epilepsia é um diagnóstico <strong>clínico</strong>, apoiado por dados obtidos da história (do paciente e de testemunhas), exame neurológico, eletroencefalograma (EEG) e, cada vez mais, exames de neuroimagem.</p>
+                <p>As síndromes epilépticas possuem diferentes causas, manifestações e implicações para o manejo e tratamento, exigindo uma avaliação cuidadosa.</p>
+                <p>Também é necessário descartar condições que imitam crises, como distúrbios do movimento, síncope, crises psicogênicas não epilépticas, ataques isquêmicos transitórios, entre outras.</p>
+
+                <h4 className="font-semibold text-white pt-2 text-lg">Abordagem de Tratamento</h4>
+                <p>A escolha do fármaco anticrise é <strong>totalmente individualizada</strong>. Ela se baseia no diagnóstico correto, tipo de crise, perfil do paciente (idade, gênero, comorbidades), interações medicamentosas e tolerância.</p>
+                <p>Um acompanhamento personalizado é fundamental para o controle das crises e para o planejamento de ação dos familiares. Esse alinhamento proporciona um ambiente de segurança, permitindo uma vida digna com redução de riscos e danos.</p>
+            </div>
+        )
     }
 ]
 
