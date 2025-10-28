@@ -43,7 +43,7 @@ const services: Service[] = [
     {
         title: 'Espasmo Hemifacial',
         desc: 'Controle dos espasmos involuntários dos músculos de um lado do rosto, devolvendo a simetria e o conforto facial.',
-        image: '/espasmo.png'
+        image: '/espasmo.jpg'
     },
     {
         title: 'Distonia Cervical',
