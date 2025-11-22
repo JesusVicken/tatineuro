@@ -42,7 +42,7 @@ export function About() {
 
                         <div className="flex items-center gap-2 text-gray-700">
                             <span className="text-lg font-medium">Neurologista</span>
-                            <span className="text-2xl">🧠</span>
+                            
                         </div>
 
                         <p className="text-gray-700 text-justify">
